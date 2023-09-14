@@ -1,4 +1,4 @@
 # skip-proto
 
-SkipProto module for [Skip](https://skip.tools") apps.
+Placeholder for future SkipProto module for [Skip](https://skip.tools") apps.
 
