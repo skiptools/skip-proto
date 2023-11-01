@@ -1,1 +1,13 @@
 # Configuration file for https://skip.tools project
+build:
+  contents:
+#    - block: 'plugins'
+#      contents:
+#        - 'id("com.google.protobuf") version "3.24.4"'
+
+    - block: 'dependencies'
+      export: false
+      contents:
+        - 'implementation("com.google.protobuf:protobuf-java:3.24.4")'
+
+

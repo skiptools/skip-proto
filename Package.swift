@@ -11,9 +11,10 @@ let package = Package(
     dependencies: [
         .package(url: "https://source.skip.tools/skip.git", from: "0.6.57"),
         .package(url: "https://source.skip.tools/skip-foundation.git", from: "0.1.16"),
+        .package(url: "https://github.com/apple/swift-protobuf.git", from: "1.25.1"),
     ],
     targets: [
-    .target(name: "SkipProto", dependencies: [.product(name: "SkipFoundation", package: "skip-foundation")], plugins: [.plugin(name: "skipstone", package: "skip")]),
+    .target(name: "SkipProto", dependencies: [.product(name: "SkipFoundation", package: "skip-foundation"), .product(name: "SwiftProtobuf", package: "swift-protobuf")], plugins: [.plugin(name: "skipstone", package: "skip")]),
     .testTarget(name: "SkipProtoTests", dependencies: [
         "SkipProto",
         .product(name: "SkipTest", package: "skip")
